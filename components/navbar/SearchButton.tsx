@@ -10,7 +10,7 @@ const searchIcon = (
     viewBox="0 0 20 20"
   >
     <path
-      stroke="orange"
+      stroke="white"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
@@ -28,7 +28,7 @@ const closeIcon = (
     viewBox="0 0 14 14"
   >
     <path
-      stroke="orange"
+      stroke="white"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
