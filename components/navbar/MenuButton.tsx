@@ -7,7 +7,7 @@ const hamburgerIcon = (
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={1.5}
-    stroke="white"
+    stroke="orange"
     className="w-10 h-8"
   >
     <path
@@ -27,7 +27,7 @@ const closeIcon = (
     viewBox="0 0 14 14"
   >
     <path
-      stroke="white"
+      stroke="orange"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

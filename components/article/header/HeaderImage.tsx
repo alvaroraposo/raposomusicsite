@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-type ArticleImageType = {
+type ImageType = {
   imageFile: string;
   imageCaption: string;
 };
 
-const ArticleImage = ({
+const HeaderImage = ({
   imageFile = "/article_cover.jpg",
   imageCaption = "Jenna Ortega em cena de Pânico 5 (Reprodução)",
-}: ArticleImageType) => {
+}: ImageType) => {
   return (
     <div className="flex flex-col">
       <Image
@@ -28,4 +28,4 @@ const ArticleImage = ({
   );
 };
 
-export default ArticleImage;
+export default HeaderImage;

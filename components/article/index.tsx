@@ -1,24 +1,29 @@
 import React from "react";
-import Image from "next/image";
-import ArticleCategories from "./ArticleCategories";
-import ArticleImage from "./ArticleImage";
+import Header from "./header";
 
 const Article = () => {
+  const headerData = {
+    headerImage: {
+      imageFile: "/article_cover.jpg",
+      imageCaption: "Jenna Ortega em cena de Pânico 5 (Reprodução)",
+    },
+    categories: {
+      mainCategory: "FILMES",
+      articleCategory: "NOTÍCIA",
+      itemCategories: ["Pânico VII", "Jenna Ortega"],
+    },
+    titles: {
+      title: "Pânico VII | Jenna Ortega sai do elenco da continuação",
+      subtitle:
+        "Notícia se segue à demissão de Melissa Barrera, outra das protagonistas da saga",
+    },
+    author: "Álvaro Raposo",
+    date: "22.11.2023, ÀS 15H03",
+  };
+
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-col w-full justify-center p-3">
-        <ArticleImage
-          imageFile="/article_cover.jpg"
-          imageCaption="Jenna Ortega em cena de Pânico 5 (Reprodução)"
-        />
-        <div className="flex flex-row text-xs italic tracking-[0.2em] -translate-y-8">
-          <ArticleCategories
-            mainCategory="FILMES"
-            articleCategory="NOTÍCIA"
-            itemCategories={["Pânico VII", "Jenna Ortega"]}
-          />
-        </div>
-      </div>
+    <div className="flex flex-col w-full p-2">
+      <Header headerData={headerData} />
     </div>
   );
 };
