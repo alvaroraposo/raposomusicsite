@@ -5,7 +5,7 @@ import MenuDisclosure from "./MenuDisclosure";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between fixed w-full from-zinc-200  border-none backdrop-blur-sm rounded-xl py-5 px-2 z-10 ">
+    <div className="flex justify-between fixed w-full  border-none bg-zinc-800 py-5  z-10 ">
       <div>
         <MenuDisclosure />
       </div>

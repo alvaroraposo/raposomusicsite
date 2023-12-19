@@ -8,7 +8,7 @@ const hamburgerIcon = (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="orange"
-    className="w-10 h-8"
+    className="w-10 h-8 ml-3"
   >
     <path
       strokeLinecap="round"
@@ -20,7 +20,7 @@ const hamburgerIcon = (
 
 const closeIcon = (
   <svg
-    className="w-8 h-8 pl-2"
+    className="w-6 h-6 ml-5"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

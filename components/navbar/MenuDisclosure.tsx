@@ -14,14 +14,14 @@ const MenuDisclosure = () => {
             </Disclosure.Button>
             <Transition
               show={open}
-              enter="transition-opacity ease-linear duration-100"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity ease-linear duration-100"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
+              enter="transition-all duration-100"
+              enterFrom="-translate-x-full"
+              enterTo="translate-x-0"
+              leave="transition-all duration-100"
+              leaveFrom="translate-x-0"
+              leaveTo="-translate-x-full"
             >
-              <Disclosure.Panel className="pl-3">
+              <Disclosure.Panel className="pt-3">
                 <div className="flex flex-col rounded-sm bg-white italic text-lg uppercase font-sans['Arial'] text-gray-950 ">
                   <MenuItem itemName="HOME" />
                   <MenuItem itemName="Rock Clássico" />

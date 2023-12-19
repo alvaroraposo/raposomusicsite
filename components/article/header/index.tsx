@@ -4,6 +4,13 @@ import HeaderImage from "../header/HeaderImage";
 import Title from "../header/Title";
 import Subtitle from "../header/Subtitle";
 import Author from "../header/Author";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import {
+  faFacebook,
+  faXTwitter,
+  faThreads,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 type HeaderImageType = {
   imageFile: string;
@@ -56,6 +63,19 @@ const Header = ({ headerData }: HeaderType) => {
       </div>
       <div className="mt-4 ">
         <Author author={author} postdate={date} />
+      </div>
+      <div className="mt-4">
+        <div className="max-w-xs w-60 text-gray-800 flex justify-between">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/terror/panico-7-jenna-ortega-saida">
+            <FontAwesomeIcon icon={faFacebook} size="2x"></FontAwesomeIcon>
+          </a>
+          <a href="https://twitter.com/intent/tweet?text=P%C3%A2nico%20VII%20%7C%20Jenna%20Ortega%20sai%20do%20elenco%20da%20continua%C3%A7%C3%A3o https%3A//omelete.com.br/terror/panico-7-jenna-ortega-saida">
+            <FontAwesomeIcon icon={faXTwitter} size="2x"></FontAwesomeIcon>
+          </a>
+          <a href="https://api.whatsapp.com/send?text=P%C3%A2nico%20VII%20%7C%20Jenna%20Ortega%20sai%20do%20elenco%20da%20continua%C3%A7%C3%A3o https%3A//omelete.com.br/terror/panico-7-jenna-ortega-saida">
+            <FontAwesomeIcon icon={faWhatsapp} size="2x"></FontAwesomeIcon>
+          </a>
+        </div>
       </div>
     </div>
   );

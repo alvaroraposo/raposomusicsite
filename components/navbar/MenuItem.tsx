@@ -1,10 +1,10 @@
 import React from "react";
 
-const MenuItem = ({ itemName = "HOME" }) => {
+const MenuItem = ({ itemName = "" }) => {
   return (
     <div className="border-t-0 border ">
-      <div className="p-2 mb-3 ">
-        <span className="w-fit border-4 border-b-orange-300 border-t-0 border-x-0">
+      <div className="px-6 py-3">
+        <span className="w-fit border-2 border-b-orange-300 border-t-0 border-x-0">
           {itemName}
         </span>
       </div>
