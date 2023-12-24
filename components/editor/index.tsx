@@ -2,12 +2,13 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import type { OutputData } from "@editorjs/editorjs";
 
 import PreviewRenderer from "./PreviewRenderer";
 const Editor = dynamic(() => import("./Editor"), { ssr: false });
 
 const Index = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<OutputData>();
   return (
     <div className="grid grid-cols-2 gap-2 m-2 bg-white text-black">
       <div className="col-span-1">

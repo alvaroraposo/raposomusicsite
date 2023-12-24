@@ -1,18 +1,19 @@
-import Header from "@editorjs/header";
 import Paragraph from "@editorjs/paragraph";
-import Link from "@editorjs/link";
-import Image from "@editorjs/image";
+import Header from "@editorjs/header";
+import SimpleImage from "@editorjs/simple-image";
+import { ItalicInlineTool, UnderlineInlineTool } from "editorjs-inline-tool";
 
 export const EDITOR_TOOLS = {
+  paragraph: {
+    class: Paragraph,
+    inlineToolbar: true,
+  },
   header: {
     class: Header,
     config: {
       placeholder: "Enter a Header",
-      levels: [2, 3, 4],
-      defaultLevel: 2,
     },
+    inlineToolbar: true,
   },
-  paragraph: Paragraph,
-  link: Link,
-  image: Image,
+  image: { class: SimpleImage, inlineToolbar: true },
 };

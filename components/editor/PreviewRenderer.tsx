@@ -7,6 +7,7 @@ const PreviewRenderer = ({ data }: { data: OutputData }) => {
   return (
     <div className="prose max-w-full" key={data.time}>
       {html.map((item, index) => {
+        console.log("item", typeof item);
         if (typeof item === "string") {
           return (
             <div dangerouslySetInnerHTML={{ __html: item }} key={index}></div>

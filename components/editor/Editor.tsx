@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import EditorJS from "@editorjs/editorjs";
 import type { OutputData } from "@editorjs/editorjs";
 import { EDITOR_TOOLS } from "./EditorTools";
 
 type EditorType = {
   data: OutputData | undefined;
-  onChange: any;
-  holder: any;
+  onChange(val: OutputData): void;
+  holder: string;
 };
 
 const Editor = ({ data, onChange, holder }: EditorType) => {
@@ -15,7 +15,7 @@ const Editor = ({ data, onChange, holder }: EditorType) => {
   useEffect(() => {
     if (!ref.current) {
       const editor = new EditorJS({
-        holder,
+        holder: holder,
         tools: EDITOR_TOOLS,
         data,
         async onChange(api, event) {
@@ -36,4 +36,4 @@ const Editor = ({ data, onChange, holder }: EditorType) => {
   return <div id={holder} className="prose max-w-full" />;
 };
 
-export default Editor;
+export default memo(Editor);
