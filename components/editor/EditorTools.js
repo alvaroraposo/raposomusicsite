@@ -1,7 +1,6 @@
 import Paragraph from "@editorjs/paragraph";
 import Header from "@editorjs/header";
 import SimpleImage from "@editorjs/simple-image";
-import { ItalicInlineTool, UnderlineInlineTool } from "editorjs-inline-tool";
 
 export const EDITOR_TOOLS = {
   paragraph: {
