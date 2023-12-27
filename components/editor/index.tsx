@@ -5,7 +5,7 @@ import { useState } from "react";
 import type { OutputData } from "@editorjs/editorjs";
 
 import PreviewRenderer from "./PreviewRenderer";
-import SubjectCombobox from "./SubjectCombobox";
+import MyCombobox from "./MyCombobox";
 import SubjectRadio from "./SubjectRadio";
 const Editor = dynamic(() => import("./Editor"), { ssr: false });
 
@@ -19,9 +19,8 @@ const Index = () => {
           <SubjectRadio />
         </div>
         <div className="flex mt-2">
-          <span className="mr-2">Assunto: </span>
           <div>
-            <SubjectCombobox />
+            <MyCombobox />
           </div>
         </div>
         <div className="border rounded-md mt-2">
@@ -30,7 +29,7 @@ const Index = () => {
       </div>
       <div className="mt-6">
         <h1>Preview do Artigo</h1>
-        <div className="border rounded-md mt-2">
+        <div className="border rounded-md mt-2 mb-2">
           <div className="p-16">{data && <PreviewRenderer data={data} />}</div>
         </div>
       </div>
